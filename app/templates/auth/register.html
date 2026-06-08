@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Register - BuddyLearn AI{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm border-0 rounded-4">
+            <div class="card-body p-5">
+                <h2 class="text-center mb-4 font-weight-bold" style="color: #4A90E2;">Join the Fun! 🎉</h2>
+                <form method="POST" action="">
+                    <div class="mb-3">
+                        <label for="username" class="form-label fw-bold">Choose a Username</label>
+                        <input type="text" class="form-control rounded-3" id="username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold">Email Address</label>
+                        <input type="email" class="form-control rounded-3" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label fw-bold">Create a Password</label>
+                        <input type="password" class="form-control rounded-3" id="password" name="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="age_group" class="form-label fw-bold">Age Group</label>
+                        <select class="form-select rounded-3" id="age_group" name="age_group">
+                            <option value="8-12">8-12 years (Kids)</option>
+                            <option value="13-18">13-18 years (Teens)</option>
+                            <option value="18+">18+ years (Young Adults)</option>
+                        </select>
+                    </div>
+                    <div class="d-grid mt-4">
+                        <button type="submit" class="btn btn-primary-custom btn-lg">Start Learning</button>
+                    </div>
+                </form>
+                <div class="text-center mt-4">
+                    <p class="text-muted">Already have an account? <a href="/auth/login" style="color: #4A90E2; font-weight: bold; text-decoration: none;">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
